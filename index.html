@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurora Perfumes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0b0b0b;
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 10%;
+  background: radial-gradient(circle at top, #3c2a4d, #000);
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero-text button {
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #d4af37, #f8e58c);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* PERFUME IMAGE */
+.hero-image img {
+  width: 300px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px rgba(212,175,55,0.6));
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* SECTION */
+section {
+  padding: 100px 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* COLLECTION */
+.collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #151515;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* CONTACT */
+.contact {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+}
+
+.contact button {
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #d4af37, #f8e58c);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: #fff;
+  font-size: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+  z-index: 2000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-btn span {
+  position: absolute;
+  right: 70px;
+  background: #111;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s;
+}
+
+.whatsapp-btn:hover span {
+  opacity: 1;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  padding: 40px 10%;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px){
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>AURORA</h1>
+  <div>
+    <a href="#about">About</a>
+    <a href="#collection">Collection</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Awaken Your Essence</h2>
+    <p>Aurora perfumes are crafted to capture elegance, mystery, and unforgettable moments.</p>
+    <button>Explore Scents</button>
+  </div>
+  <div class="hero-image">
+    <img src="images/aurora_hero.png" alt="Perfume">
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Aurora</h2>
+  <div class="about">
+    <p>
+      Aurora is a luxury perfume brand inspired by the beauty of dawn.  
+      Our fragrances are blended using premium ingredients to create timeless elegance.
+    </p>
+    <img src="images/aurora_black.png" alt="About Aurora">
+  </div>
+</section>
+
+<section id="collection">
+  <h2 class="section-title">Our Collection</h2>
+  <div class="collection">
+    <div class="card">
+      <img src="images/Aurora_1.png">
+      <h3>Aurora Bloom</h3>
+      <p>Floral & fresh elegance</p>
+    </div>
+    <div class="card">
+      <img src="images/aurora_hero.png">
+      <h3>Midnight Glow</h3>
+      <p>Warm & seductive notes</p>
+    </div>
+    <div class="card">
+      <img src="images/aurora_black.png">
+      <h3>Golden Dawn</h3>
+      <p>Bold luxury finish</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact Aurora</h2>
+  <div class="contact">
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Aurora Perfumes</p>
+  <p>📍 Johannesburg, South Africa | ☎ +27 000 000 000</p>
+</footer>
+
+<!-- WHATSAPP CHAT -->
+<a href="https://wa.me/2695687023" target="_blank" class="whatsapp-btn">
+  💬
+  <span>Chat with Aurora</span>
+</a>
+
+</body>
+</html>
